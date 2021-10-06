@@ -4,19 +4,27 @@
   "description": "This is a starter template to scaffold an Express Server and a Webapp, with essential modules and middleware",
   "main": "",
   "scripts": {
+    "dev": "concurrently \"npm run buildClientDev\" \"npm run serve\"",
+    "prod": "rimraf dist && rollup -c && node server",
     "serve": "node server",
+    "buildClient": "rimraf dist && rollup -c",
+    "buildClientDev": "rimraf dist && rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Paul Maneesilasan",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^6.3.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-copy": "^3.4.0"
   },
   "dependencies": {
     "express": "^4.17.1"
