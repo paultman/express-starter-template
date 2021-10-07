@@ -14,50 +14,48 @@ It features:
 - Compression for gzip/deflate of network calls
 - Passport with JWT for authentication
 
-It is tagged at various points in its creation.
+Code tagged at various points in its creation.
 
-## Express Project with VSC env and Airbnb Style guide
-
-### #Base
+### v1.0 #Base
 
 - [Eslint](https://eslint.org)
 - [Prettier](https://prettier.io)
 - [Airbnb style guide](https://github.com/airbnb/javascript)
-- [Visual Studio code](https://visualstudio.microsoft.com) configured for code standards
+- [Visual Studio code](https://visualstudio.microsoft.com) configured for uniform code standards/style
 
-### #Rollup
+### v1.1 #Rollup
 
 - [Rollup](https://rollupjs.org/guide/en/) with copy files
 - [Rimraf](https://github.com/isaacs/rimraf) to clean dist directory
 - [Concurrently](https://github.com/open-cli-tools/concurrently) to run node server and run rollup on client code
 
-### #Logging
+### v1.2 #Logging
 
 - [Winston](https://github.com/winstonjs/winston)
 - [Morgan](https://github.com/expressjs/morgan)
 
-### #Docs
+### v1.3 #Docs
 
 - [JsDoc](https://jsdoc.app)
 
-### #Tests
+### v1.4 #Tests
 
 - [Jest](https://jestjs.io)
 - [-supertest](https://github.com/visionmedia/supertest)
 
-### #DataStore
+### v1.5 #DataStore
 
 - [nativeMongo](https://github.com/mongodb/node-mongodb-native)
 
-### #Authentication
+### v1.6 #Authentication
 
 - [Passport](http://www.passportjs.org)
 - [JWT Strategy](http://www.passportjs.org/packages/passport-jwt/)
 
-### #Security
+### v1.7 #Security
 
 - [Helmet](https://github.com/helmetjs/helmet)
 
-### #Optimization
+### v1.8 #Optimization
 
 - [Compression](http://expressjs.com/en/resources/middleware/compression.html)

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const config = require('./config');
+const logger = require('./lib/logger');
 
 const app = express();
 
@@ -10,5 +11,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(config.app.port, () => {
-  console.log(`Server listening at http://localhost:${config.app.port}`);
+  logger.info(`Server listening at http://localhost:${config.app.port}`);
 });
