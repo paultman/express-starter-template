@@ -1,9 +1,18 @@
 const express = require('express');
 const path = require('path');
+const morgan = require('morgan');
 const config = require('./config');
 const logger = require('./lib/logger');
 
 const app = express();
+
+app.use(
+  morgan('tiny', {
+    stream: {
+      write: (message, encoding) => logger.info(message),
+    },
+  })
+);
 
 app.use(express.static('dist'));
 app.get('/', (req, res) => {

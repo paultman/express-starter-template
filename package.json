@@ -4,7 +4,7 @@
   "description": "This is a starter template to scaffold an Express Server and a Webapp, with essential modules and middleware",
   "main": "",
   "scripts": {
-    "dev": "concurrently \"npm run buildClientDev\" \"npm run serve\"",
+    "dev": "NODE_ENV=development concurrently \"npm run buildClientDev\" \"npm run serve\"",
     "prod": "rimraf dist && rollup -c && node server",
     "serve": "node server",
     "buildClient": "rimraf dist && rollup -c",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "winston": "^3.3.3"
   }
 }
