@@ -17,7 +17,11 @@ const tasks = {
  * @param {Object} res Call json method on request to return requested task in JSON format
  * @returns {undefined}
  */
-module.exports.getTask = (req, res) => res.json(tasks[req.params.id]);
+module.exports.getTask = (req, res) => {
+  const taskID = req.params.id;
+  if (tasks[taskID] !== undefined) res.json(tasks[req.params.id]);
+  else throw new Error('Task with ID: ${taskID} not found');
+};
 
 /**
  * Get all tasks in database, regardless of state or ID
