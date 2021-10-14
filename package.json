@@ -9,6 +9,7 @@
     "serve": "node server",
     "buildClient": "rimraf dist && rollup -c",
     "buildClientDev": "rimraf dist && rollup -c -w",
+    "docs": "rimraf docs && jsdoc -c jsdoc.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,11 +17,13 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^6.3.0",
+    "docdash": "^1.2.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
+    "jsdoc": "^3.6.7",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.58.0",

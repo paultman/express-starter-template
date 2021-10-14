@@ -41,7 +41,7 @@ Code tagged at various points in its creation.
 ### v1.4 #Tests
 
 - [Jest](https://jestjs.io)
-- [-supertest](https://github.com/visionmedia/supertest)
+- [supertest](https://github.com/visionmedia/supertest)
 
 ### v1.5 #DataStore
 
