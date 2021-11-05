@@ -4,8 +4,10 @@ const path = require('path');
 const express = require('express');
 const taskRoutes = require('./controllers/task');
 
-module.exports = (config, logger) => {
-  const app = express();
+const app = express();
+
+app.init = (config, logger, db) => {
+  taskRoutes.init(config, logger, db);
   app.use(
     morgan('tiny', {
       stream: {
@@ -19,8 +21,14 @@ module.exports = (config, logger) => {
     res.sendFile(path.join(__dirname, '/dist/index.html'));
   });
 
-  app.get('/task/all', taskRoutes.getAllTasks);
-  app.get('/task/:id', taskRoutes.getTask);
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
 
-  return app;
+  app.get('/task/all', taskRoutes.getAll);
+  app.get('/task/:id', taskRoutes.get);
+  app.post('/task', taskRoutes.create);
+  app.post('/task/:id', taskRoutes.update);
+  app.delete('/task/:id', taskRoutes.delete);
 };
+
+module.exports = app;

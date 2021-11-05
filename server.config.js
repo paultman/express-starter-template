@@ -8,5 +8,5 @@ const config = {
     name: 'db',
   },
 };
-
+config.db.localMongoURI = `mongodb://${config.db.host}:${config.db.port}/?maxPoolSize=20&w=majority`;
 module.exports = config;
