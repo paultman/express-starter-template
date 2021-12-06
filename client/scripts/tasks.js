@@ -1,4 +1,4 @@
-/* index.js
+/* tasks.js
   A simple client script to illustrate CRUD operations to an express server using mongodb
 */
 let nextSeqID = 0;

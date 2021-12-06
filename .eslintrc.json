@@ -8,5 +8,9 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    // Allow dangling underscores
+    // http://eslint.org/docs/rules/no-underscore-dangle
+    "no-underscore-dangle": [0]
+  }
 }
